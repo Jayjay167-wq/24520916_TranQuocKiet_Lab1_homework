@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'none'; form-action 'none'; object-src 'none'; script-src 'self'; style-src 'self'; img-src 'none'; font-src 'none'; connect-src 'none'; media-src 'self'; frame-src 'none'; manifest-src 'none'; worker-src 'none'">
+  <title>Drum Kit</title>
+  <link rel="stylesheet" href="drum-kit.css">
+  <script type="module" src="drum-kit.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Drum Kit</h1>
+    <p>Click a labeled pad or press its keyboard key to play a drum sound.</p>
+  </header>
+  <main>
+    <section aria-labelledby="drum-pads-heading">
+      <h2 id="drum-pads-heading">Drum pads</h2>
+      <ul>
+        <li><button class="drum-pad" type="button" data-key="a" data-sound="sounds/kick.wav" aria-label="Kick drum, keyboard key A"><kbd>A</kbd> Kick drum</button></li>
+        <li><button class="drum-pad" type="button" data-key="s" data-sound="sounds/snare.wav" aria-label="Snare drum, keyboard key S"><kbd>S</kbd> Snare drum</button></li>
+        <li><button class="drum-pad" type="button" data-key="d" data-sound="sounds/hi-hat.wav" aria-label="Hi-hat, keyboard key D"><kbd>D</kbd> Hi-hat</button></li>
+        <li><button class="drum-pad" type="button" data-key="f" data-sound="sounds/clap.wav" aria-label="Clap, keyboard key F"><kbd>F</kbd> Clap</button></li>
+        <li><button class="drum-pad" type="button" data-key="g" data-sound="sounds/low-tom.wav" aria-label="Low tom, keyboard key G"><kbd>G</kbd> Low tom</button></li>
+        <li><button class="drum-pad" type="button" data-key="h" data-sound="sounds/mid-tom.wav" aria-label="Mid tom, keyboard key H"><kbd>H</kbd> Mid tom</button></li>
+        <li><button class="drum-pad" type="button" data-key="j" data-sound="sounds/crash.wav" aria-label="Crash cymbal, keyboard key J"><kbd>J</kbd> Crash cymbal</button></li>
+        <li><button class="drum-pad" type="button" data-key="k" data-sound="sounds/ride.wav" aria-label="Ride cymbal, keyboard key K"><kbd>K</kbd> Ride cymbal</button></li>
+      </ul>
+    </section>
+    <section aria-labelledby="recorder-heading">
+      <h2 id="recorder-heading">Beat recorder</h2>
+      <p id="recorder-status" aria-live="polite">Ready to record.</p>
+      <p>
+        <button id="record-button" type="button" aria-pressed="false">Record</button>
+        <button id="stop-button" type="button">Stop</button>
+        <button id="playback-button" type="button" disabled>Playback</button>
+      </p>
+    </section>
+  </main>
+  <footer>
+    <p>Each pad uses its visible key label and local sound asset.</p>
+  </footer>
+</body>
+</html>

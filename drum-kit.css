@@ -1,0 +1,21 @@
+.drum-pad {
+  transition: background-color 150ms ease, border-color 150ms ease, color 150ms ease, transform 150ms ease;
+}
+
+.drum-pad.active {
+  background-color: #0f766e;
+  border-color: #115e59;
+  color: #ffffff;
+  transform: translateY(1px);
+}
+
+#record-button[aria-pressed="true"] {
+  background-color: #b91c1c;
+  color: #ffffff;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .drum-pad {
+    transition: none;
+  }
+}

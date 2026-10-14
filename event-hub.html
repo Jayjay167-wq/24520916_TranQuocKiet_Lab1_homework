@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'none'; form-action 'none'; object-src 'none'; script-src 'self'; style-src 'none'; img-src 'none'; font-src 'none'; connect-src 'none'; media-src 'none'; frame-src 'none'; manifest-src 'none'; worker-src 'none'">
+  <title>Resilient Event Hub</title>
+  <script type="module" src="event-hub.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Resilient Event Hub</h1>
+    <p>Join a practical session on dependable web experiences.</p>
+  </header>
+  <main>
+    <section aria-labelledby="event-details-heading">
+      <h2 id="event-details-heading">Event details</h2>
+      <p>The event begins on <time datetime="2026-12-01T09:00:00Z">December 1, 2026 at 09:00 UTC</time>.</p>
+    </section>
+    <section aria-labelledby="countdown-heading">
+      <h2 id="countdown-heading">Countdown</h2>
+      <p id="countdown-status" role="status" aria-live="polite" aria-atomic="true">Countdown is ready to start.</p>
+    </section>
+    <section aria-labelledby="registration-heading">
+      <h2 id="registration-heading">Register your interest</h2>
+      <form id="registration-form" aria-describedby="form-status">
+        <p>
+          <label for="attendee-name">Name</label>
+          <input id="attendee-name" name="name" type="text" autocomplete="name" required>
+        </p>
+        <p>
+          <label for="attendee-email">Email address</label>
+          <input id="attendee-email" name="email" type="email" autocomplete="email" required>
+        </p>
+        <p>
+          <label for="attendee-message">What would you like to learn?</label>
+          <textarea id="attendee-message" name="message" minlength="10" required></textarea>
+        </p>
+        <p>
+          <button type="submit">Submit registration</button>
+        </p>
+      </form>
+      <p id="form-status" role="status" aria-live="polite" aria-atomic="true">Complete the form to register your interest.</p>
+    </section>
+  </main>
+  <footer>
+    <p>Resilient Event Hub</p>
+  </footer>
+</body>
+</html>
